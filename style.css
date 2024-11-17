@@ -1,0 +1,136 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color:white;
+}
+
+header {
+    background-color:pink;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    text-align: center;
+}
+
+.carousel-container {
+    overflow: hidden;
+    margin: 20px auto;
+    width: 50%;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color:rosybrown;
+    font-size: 2rem;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+.next-btn {
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+/* Details Section */
+.details {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.saree-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.saree-item {
+    margin: 15px;
+    width: 250px;
+    background-color:brown;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.saree-item:hover {
+    transform: scale(1.05);
+}
+
+.saree-item img {
+    width: 100%;
+    height: auto;
+}
+
+.saree-item h3 {
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.saree-item p {
+    padding: 0 10px 10px;
+    color: plum;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .carousel-images {
+        flex-direction: column;
+    }
+
+    .carousel-item {
+        max-height: 400px;
+        object-fit: cover;
+    }
+
+    .saree-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .saree-item {
+        width: 90%;
+    }
+
+    button {
+        font-size: 1.5rem;
+    }
+}
